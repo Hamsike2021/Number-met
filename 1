@@ -1,19 +1,21 @@
-x_long = linspace(-5,5,100);
-x_short = -3:3;
+x_long = linspace(-30,30,1000);
+x_short = linspace(-3,3,100);
 
-y_long = (2*x_long+3).^3
-y_short = (2*x_short+3).^3
-ylim = 
+y_long_mon = (2*x_long+3).^0,75
+y_short_mon = (2*x_short+3).^0,75
+
+
+
+y_long_sin_non_mon = 100*sin(x_long);
+y_short_sin_non_mon = 100*sin(x_short)'
+
+
+y_long_cos_non_mon = 100*cos(x_long)+ 20;
+y_short_cos_non_mon = 100*cos(x_short)+ 20;
 
 plot(x_long, y_long, 'g')
 hold on
-
-y_long_sin = 100*sin(x_long);
-y_short_sin = 100*sin(x_short)'
 plot(x_long, y_long_sin, 'r')
 hold on
-
-y_long_cos = 100*cos(x_long)+ 20;
-y_short_cos = 100*cos(x_short)+ 20;
 plot(x_long, y_long_cos, 'b')
 hold on
