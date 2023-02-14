@@ -25,3 +25,13 @@ plot(x_long, y_long_non_smooth, 'b-');
 plot(x_long, y2_long_non_smooth, 'b--');
 legend('y = (2*x_long+3).^0.2: монотонная', 'y = 1.5*e^0.01x_long: монотонная', 'y = 4*sin(x_long + 3): немонотонная и гладкая'...
 'y = 3*cos(x_long) + 3: немонотонная и гладкая', 'y = 0.25*abs(x_long - 10): негладкая', 'y = 5*acot(x_long^0.9) + 2: негладкая')
+
+long = figure;
+plot(x_short, y_short_mon, 'g-'); hold on
+plot(x_short, y2_short_mon, 'g--');
+plot(x_short, y_short_sin_non_mon_smooth, 'r-');
+plot(x_short, y_short_cos_non_mon_smooth, 'r--');
+plot(x_short, y_short_non_smooth, 'b-');
+plot(x_short, y2_short_non_smooth, 'b--');
+legend('y = (2*x_short+3).^0.2: монотонная', 'y = 1.5*e^0.01x_short: монотонная', 'y = 4*sin(x_short + 3): немонотонная и гладкая'...
+'y = 3*cos(x_short) + 3: немонотонная и гладкая', 'y = 0.25*abs(x_short - 10): негладкая', 'y = 5*acot(x_short^0.9) + 2: негладкая')
